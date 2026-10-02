@@ -1,0 +1,13 @@
+# Claude Code
+.claude/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Python
+__pycache__/
+*.pyc
+.env
+
+# macOS
+.DS_Store
