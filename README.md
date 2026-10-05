@@ -1,6 +1,6 @@
 # Elastic × Mistral NYC Hack Night
 
-Welcome to the **Elastic × Mistral NYC Hack Night**! Tonight you'll build something that leverages **Elasticsearch** and **Mistral** models on top of **open NYC data** — a search experience, a RAG app, an analytics pipeline, an agent, whatever your idea calls for.
+Welcome to the **Elastic × Mistral NYC Hack Night**! Tonight you'll build something that leverages tech from **Elasticsearch** and **Mistral** to work with **open NYC data** — a search experience, a RAG app, an analytics pipeline, an agent, a multilingual voice agent - whatever brings your idea to life.
 
 The theme is **New York City**. The city publishes an enormous amount of open data — restaurant inspections, 311 complaints, a squirrel census, live transit feeds, and much more. Your job is to turn some slice of it into something that reasons, answers, and surprises. Semantic search, a RAG chatbot, a conversational analyst, a moderation pipeline — if it runs on Elasticsearch and Mistral, we want to see it.
 
