@@ -1,6 +1,6 @@
 # Hack Night Open Challenge
 
-Build anything you like on NYC data with **Elasticsearch + Mistral**. This page has project ideas across the suggested datasets and a ready-to-run ingest example you can point at *any* NYC Open Data set.
+Build anything you like on NYC data using tech from **Elasticsearch** and **Mistral**. This page has project ideas across the suggested datasets and a ready-to-run ingest example you can point at *any* NYC Open Data set.
 
 > No polished UI required — a notebook, Dev Tools, a script, or Kibana is a perfectly good demo. We care about how you combine Elastic and Mistral, not how it looks. Agent Builder is an optional bonus, not a requirement.
 
