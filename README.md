@@ -1,14 +1,30 @@
 # Elastic × Mistral NYC Hack Night
 
-Welcome to the **Elastic × Mistral NYC Hack Night**! Tonight you'll build something that leverages tech from **Elasticsearch** and **Mistral** to work with **open NYC data** — a search experience, a RAG app, an analytics pipeline, an agent, a multilingual voice agent - whatever brings your idea to life.
+Welcome to the **Elastic × Mistral NYC Hack Night**! Tonight you'll build something that uses tech from **Elastic** and **Mistral AI** to work with **open NYC data** — a search experience, a RAG app, an analytics pipeline, an agent, a multilingual voice agent - whatever brings your idea to life. Mix and match however suits your idea.
 
-The theme is **New York City**. The city publishes an enormous amount of open data — restaurant inspections, 311 complaints, a squirrel census, live transit feeds, and much more. Your job is to turn some slice of it into something that reasons, answers, and surprises. Semantic search, a RAG chatbot, a conversational analyst, a moderation pipeline — if it runs on Elasticsearch and Mistral, we want to see it.
+The theme is **New York City**. The city publishes an enormous amount of open data — restaurant inspections, 311 complaints, a squirrel census, live transit feeds, and much more. Your job is to turn some slice of it into something that reasons, answers, and surprises. Semantic search, a RAG chatbot, a conversational analyst, a moderation pipeline — if it combines Elastic and Mistral, we want to see it.
 
 **Date:** October 7, 2026
 **Location:** Elastic NYC Office
 **Hack time:** ~3 hours
 
-> **This is a hack about ideas, not interfaces.** We are judging how creatively and effectively you combine **Elastic** and **Mistral** — not how your project looks. You do **not** need a polished front-end, and fancy JavaScript or slick animations win you nothing. A notebook, a Dev Tools session, a terminal script, or Kibana itself is a perfectly good way to demo. Spend your three hours on the data and the models.
+> **This is a hack about ideas, not interfaces.** We are judging how creatively and effectively you combine **Elastic** and **Mistral tech** — not how your project looks. You do **not** need a polished front-end, and fancy JavaScript or slick animations win you nothing. A notebook, a Dev Tools session, a terminal script, or Kibana itself is a perfectly good way to demo. Spend your three hours on the data and the ideas.
+
+---
+
+## Schedule
+
+**5:00 PM – Doors open**
+Grab food and drinks, meet other attendees, and get settled.
+
+**5:30 PM – Kickoff and demo**
+We'll introduce the challenge, walk through the tools, and share the starter resources.
+
+**5:45 PM – Build time**
+Choose an idea and start building. Mentors from Mistral AI and Elastic will be available to help.
+
+**8:00 PM – Show and tell**
+Share what you built with the room, no matter how finished it is. After the demos, we'll award prizes to the top projects.
 
 ---
 
@@ -20,34 +36,29 @@ Projects will be evaluated on:
 |---|---|
 | **Novelty** | A unique idea, a novel use of the data, or an interesting technical approach. |
 | **Use of Elastic** | Meaningful use of Elasticsearch — search, aggregations, vector/semantic search. Agent Builder is a bonus, not a requirement. |
-| **Use of Mistral** | Meaningful use of Mistral models — embeddings, general-purpose/reasoning chat, moderation, audio, or coding. |
-| **Use of MCP and other tools** | Optional: connecting to Claude, an IDE, or your own app via MCP, or wiring in other tooling. |
+| **Use of Mistral** | Meaningful use of Mistral — its APIs, products, creation tools like the Vibe coding CLI, or the AI capabilities behind them. |
 
 At the end you'll present what you built — no matter how finished it is. Show it off even if it's rough; that's the spirit of the night.
 
 Some presentation guidelines:
 - **3-minute demo** of what you built. No polished UI expected — a notebook, Dev Tools, a script, or Kibana is fine.
-- Show the **Elastic** portion (your queries, mappings, or tools) and the **Mistral** portion (which models you used and where). Those two, plus any accompanying tech, must be part of the demo.
+- Show the **Elastic** portion (your queries, mappings, or tools) and the **Mistral** portion (which Mistral tech you used and where). Those two, plus any accompanying tech, must be part of the demo.
 
-**Submission:** Post on DevPost (link pending).
-
-**Recommended team size:** Individuals or small teams of 2–4.
+**Submission:** Submit your final project on the [Mistral x Elastic Hackathon DevPost page](https://mistral-x-elastic-hackathon.devpost.com/?preview_token=tz74zdFHpy5jjL9JWIN2YChGi9WCsrYac4nL2mZ2ppE%3D).
 
 ---
 
 ## What you can build
 
-Anything that puts **Elasticsearch** and **Mistral** to work on NYC data. To get moving fast:
+Anything that combines **Elastic** and **Mistral** tech on NYC data. There's no required architecture — approach it however suits your idea. You might put Elasticsearch at the center, call Mistral APIs from your own code and index the results, build with Mistral's tools and Elastic's side by side, or something we haven't thought of. To get moving fast:
 
 1. **Pick a dataset** from the table below — each one has a ready-to-run ingest notebook that loads it into Elasticsearch.
-2. **Add Mistral** — embeddings for semantic search, a chat model for a RAG answer, moderation, OCR, audio, whatever fits your idea. The [Mistral guide](mistral_guide.md) shows how.
+2. **Bring in Mistral tech** — Mistral's Vibe coding CLI and other creation tools, its APIs and products (OCR, audio, moderation, and more), or anything else Mistral offers. Mistral is a required part of your stack. The [Mistral guide](mistral_guide.md) is a starting point.
 3. **Build your thing** — a search experience, a RAG app, an analytics pipeline, a classifier, an agent. See [open_challenge.md](open_challenge.md) for ideas and a generic ingest example.
 
-You'll use a serverless Elastic deployment: [Elastic Cloud Serverless free trial](https://www.elastic.co/cloud/cloud-trial-overview).
+You can use a serverless Elastic deployment: [Elastic Cloud Serverless free trial](https://www.elastic.co/cloud/cloud-trial-overview).
 
-**Need an LLM, embeddings, moderation, or speech?** Use **Mistral** through Elasticsearch. The [Mistral guide](mistral_guide.md) shows how to create Mistral inference endpoints for embeddings and chat, and how to tap Mistral's other capabilities.
-
-> **Agent Builder is optional.** Elastic [Agent Builder](https://www.elastic.co/docs/explore-analyze/ai-features/elastic-agent-builder) is a slick, no-code way to stand up a conversational agent with Mistral as its brain, and it's a great fit for some ideas — but it is **not** required. A RAG script, a semantic-search demo, or an analytics notebook counts just as much.
+> **Agent Builder is optional.** Elastic [Agent Builder](https://www.elastic.co/docs/explore-analyze/ai-features/elastic-agent-builder) is a slick, no-code way to stand up a conversational agent, and it's a great fit for some ideas — but it is **not** required. A RAG script, a semantic-search demo, or an analytics notebook counts just as much.
 
 ---
 
@@ -55,29 +66,28 @@ You'll use a serverless Elastic deployment: [Elastic Cloud Serverless free trial
 
 You'll need two things:
 
-1. **Elasticsearch Serverless (9.4+)** — [free trial](https://www.elastic.co/cloud/cloud-trial-overview). This is the home for your data and where Agent Builder lives.
-2. **Mistral API key(s)** — for the embedding and general-purpose models. We'll hand these out at the event. You'll plug them into Elastic inference endpoints (see the [Mistral guide](mistral_guide.md)).
+1. **Elasticsearch Serverless (9.4+)** — [free trial](https://www.elastic.co/cloud/cloud-trial-overview). A home for your data, and where Agent Builder lives.
+2. **Mistral API key(s)** — We'll hand these out at the event. Use them directly with Mistral's APIs and tools, or plug them into Elastic inference endpoints (see the [Mistral guide](mistral_guide.md)).
 
-**How Elasticsearch is used:** Elasticsearch is the main data store. You ingest an NYC dataset and query it — full-text, aggregations, vector/semantic search — from a notebook, Dev Tools, your own app, or (optionally) Agent Builder. If you build an agent, you can expose it over the built-in **MCP server** to drive it from Claude or your own app.
+**How Elastic is used:** Elasticsearch can store and query an NYC dataset — full-text, aggregations, vector/semantic search — from a notebook, Dev Tools, your own app, or (optionally) Agent Builder.
 
-**How Mistral is used:** Mistral provides the intelligence. A common pairing is a Mistral **embedding** model for semantic/vector search plus a Mistral **general-purpose** model for generation — both wired in as Elasticsearch inference endpoints. Beyond that, Mistral is open for you to explore (see below).
+**How Mistral is used:** Mistral is the other essential half of your stack, providing the AI capabilities and the tooling. Use its APIs, products, and creation tools like the Vibe coding CLI directly, or wire Mistral into Elasticsearch as inference endpoints — whichever fits your idea.
 
 ---
 
 ## Mistral capabilities to explore
 
-Keep it open — these are prompts, not requirements. Any of these can anchor a project:
+Keep it open — these are prompts, not requirements. Any of these can anchor a project, and so can anything else Mistral offers:
 
-| Capability | Where it shines | Models |
-|---|---|---|
-| **Embeddings** | Semantic search and RAG over NYC text (violations, 311 complaints, squirrel sightings) | `mistral-embed` |
-| **General-purpose chat** | The reasoning brain behind a RAG answer, an agent, or any generation step | `mistral-large-latest`, `mistral-small-latest` |
-| **Reasoning models** | Multi-step analysis, planning, harder questions | `magistral-medium-latest`, `magistral-small-latest` |
-| **Content moderation** | Flag or filter user input and dataset text | `mistral-moderation-latest` |
-| **Speech-to-text & text-to-speech** | Voice-driven NYC assistants; transcribe audio into Elasticsearch | Voxtral (audio) |
-| **Vibe-coding & CLI** | Build faster with Mistral's coding models and CLI/IDE tooling | `codestral-latest` |
+| Capability | Where it shines |
+|---|---|
+| **Vibe coding & CLI** | Build faster with Mistral's Vibe coding CLI and IDE tooling |
+| **Semantic search & RAG** | Meaning-based search and grounded answers over NYC text (violations, 311 complaints, squirrel sightings) |
+| **Agents & reasoning** | Multi-step analysis, planning, and answering harder questions |
+| **Content moderation** | Flag or filter user input and dataset text |
+| **Speech, audio & OCR** | Voice-driven NYC assistants; transcribe audio or read scanned documents into Elasticsearch |
 
-See the [Mistral guide](mistral_guide.md) for how to reach these from Elasticsearch, and [Mistral's model docs](https://docs.mistral.ai/getting-started/models/models_overview/) for the current list of model IDs.
+See the [Mistral guide](mistral_guide.md) for how to get started, and [Mistral's docs](https://docs.mistral.ai/) for what's available.
 
 ---
 
@@ -91,12 +101,12 @@ Each dataset ships with a ready-to-run ingest notebook in this repo — connect 
 |---|---|---|
 | **[DOHMH Restaurant Inspection Results](https://data.cityofnewyork.us/Health/DOHMH-New-York-City-Restaurant-Inspection-Results/43nn-pn8j/data_preview)** | Every NYC restaurant inspection: grades, scores, violations, cuisine, borough, location. Rich text + categories + geo — great for aggregations and semantic search alike. | [nyc_restaurant_analyst.ipynb](nyc_restaurant_analyst.ipynb) |
 | **[2018 Central Park Squirrel Census](https://data.cityofnewyork.us/Environment/2018-Central-Park-Squirrel-Census-Stories/gfqj-f768/about_data)** | Field notes and stories from an actual census of Central Park's squirrels. Delightfully weird narrative text, perfect for embeddings. | [nyc_squirrel_census.ipynb](nyc_squirrel_census.ipynb) |
-| **[311 Public Feedback / complaint types](https://data.cityofnewyork.us/City-Government/Public-feedback-on-311-request-complaint-types/7ffd-6gs9/about_data)** | Free-text feedback New Yorkers submit to 311. Ideal for embeddings and Mistral moderation (plus a pointer to the giant 311 Service Requests set). | [nyc_311_feedback.ipynb](nyc_311_feedback.ipynb) |
+| **[311 Public Feedback / complaint types](https://data.cityofnewyork.us/City-Government/Public-feedback-on-311-request-complaint-types/7ffd-6gs9/about_data)** | Free-text feedback New Yorkers submit to 311. Ideal for semantic search and Mistral moderation (plus a pointer to the giant 311 Service Requests set). | [nyc_311_feedback.ipynb](nyc_311_feedback.ipynb) |
 | **[MTA Subway Real-Time Feeds](https://api.mta.info/#/subwayRealTimeFeeds)** | Live train positions and arrival predictions (GTFS-Realtime). Real-time data for a live agent. | [mta_subway_realtime.ipynb](mta_subway_realtime.ipynb) |
 | **[MTA Subway Schedule](https://www.mta.info/developers)** | Static GTFS schedule — routes, stops (with geo), timetables. Pairs with the live feed. | [mta_subway_schedule.ipynb](mta_subway_schedule.ipynb) |
 | **[NYC 1940s Tax Photos](https://nycrecords.access.preservica.com/uncategorized/SO_d501be84-e09a-4023-bb8a-263aa8b0e04f/)** | ~720,000 WPA photographs of every NYC building (1939–1941), with block/lot signboards. A real-world **Mistral OCR** stress test. | [nyc_tax_photos.ipynb](nyc_tax_photos.ipynb) + [tax_photos_scraper.py](tax_photos_scraper.py) |
 | **[SONYC Urban Sound Tagging](https://zenodo.org/records/2590742)** | Thousands of 10-second street recordings from NYC's acoustic sensor network, tagged across 23 sound classes. Great for **Mistral Voxtral** speech-to-text. | [nyc_sonyc_sound.ipynb](nyc_sonyc_sound.ipynb) |
-| **[City Nature Challenge: NYC](https://www.inaturalist.org/projects/city-nature-challenge-2025-new-york-city)** | ~22,000 geo-tagged iNaturalist observations of NYC's wild plants, birds, bugs and fungi — each with a **photo** (and sometimes **audio**). The most multimodal set here: Mistral vision + Voxtral + embeddings. | [nyc_city_nature_challenge.ipynb](nyc_city_nature_challenge.ipynb) |
+| **[City Nature Challenge: NYC](https://www.inaturalist.org/projects/city-nature-challenge-2025-new-york-city)** | ~22,000 geo-tagged iNaturalist observations of NYC's wild plants, birds, bugs and fungi — each with a **photo** (and sometimes **audio**). The most multimodal set here: images, audio, and text. | [nyc_city_nature_challenge.ipynb](nyc_city_nature_challenge.ipynb) |
 
 Mix datasets freely — e.g., join 311 rat complaints with restaurant rodent violations by neighborhood, overlay the squirrel census (or City Nature Challenge sightings) on subway stops, or OCR a block's 1940s photos and cross-reference today's inspection grades.
 
@@ -121,9 +131,9 @@ Handy documentation and references for tonight.
 - [Connecting to Elasticsearch](https://www.elastic.co/docs/reference/elasticsearch/clients) — endpoints, API keys, and client setup
 
 ### Mistral on Elastic
-- [Mistral guide (this repo)](mistral_guide.md) — embeddings, chat, and the rest of Mistral's lineup through Elasticsearch
+- [Mistral guide (this repo)](mistral_guide.md) — getting started with Mistral in a hack setting
 - [Create a Mistral inference endpoint (API)](https://www.elastic.co/docs/api/doc/elasticsearch/operation/operation-inference-put-mistral)
-- [Mistral model overview](https://docs.mistral.ai/getting-started/models/models_overview/)
+- [Mistral docs](https://docs.mistral.ai/)
 
 ### Agent Builder (optional)
 - [Agent Builder overview](https://www.elastic.co/docs/explore-analyze/ai-features/elastic-agent-builder)
