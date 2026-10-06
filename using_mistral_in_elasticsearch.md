@@ -1,7 +1,7 @@
-# 🤖 Using Mistral with Elasticsearch
+# 🤖 Using Mistral in Elasticsearch
 
-This hack night pairs **Elasticsearch** with **Mistral** models. The cleanest way to use Mistral is through Elasticsearch's **Inference API**: you create an *inference endpoint* backed by Mistral once, and then everything in Elastic — `semantic_text` fields, your own queries, and (optionally) Agent Builder — can use it. Auth is handled for you: the Mistral API key lives inside the endpoint, so your app only ever talks to Elasticsearch.
 
+This hack night pairs **Elasticsearch** with **Mistral** models. If you want to use Mistral through Elasticsearch's **Inference API**: you create an *inference endpoint* backed by Mistral once, and then everything in Elastic — `semantic_text` fields, your own queries, and (optionally) Agent Builder — can use it. Auth is handled for you: the Mistral API key lives inside the endpoint, so your app only ever talks to Elasticsearch.
 You'll typically create **two** endpoints:
 
 1. a **`text_embedding`** endpoint (for semantic/vector search), and
