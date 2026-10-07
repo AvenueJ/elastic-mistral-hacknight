@@ -56,7 +56,7 @@ Anything that combines **Elastic** and **Mistral** tech on NYC data. There's no 
 2. **Bring in Mistral tech** — Mistral's Vibe coding CLI and other creation tools, its APIs and products (OCR, audio, moderation, and more), or anything else Mistral offers. Mistral is a required part of your stack. The [Mistral guide](mistral_guide.md) is a starting point.
 3. **Build your thing** — a search experience, a RAG app, an analytics pipeline, a classifier, an agent. See [open_challenge.md](open_challenge.md) for ideas and a generic ingest example.
 
-You can use a serverless Elastic deployment: [Elastic Cloud Serverless free trial](https://www.elastic.co/cloud/cloud-trial-overview).
+You can use a serverless Elastic deployment: [Elastic Cloud Serverless free trial](https://cloud.elastic.co/serverless-registration?utm_source=github&utm_medium=event&utm_campaign=2026-10-07-elastic-mistral-nyc-hacknight-amer&utm_content=link).
 
 > **Agent Builder is optional.** Elastic [Agent Builder](https://www.elastic.co/docs/explore-analyze/ai-features/elastic-agent-builder) is a slick, no-code way to stand up a conversational agent, and it's a great fit for some ideas — but it is **not** required. A RAG script, a semantic-search demo, or an analytics notebook counts just as much.
 
@@ -66,7 +66,7 @@ You can use a serverless Elastic deployment: [Elastic Cloud Serverless free tria
 
 You'll need two things:
 
-1. **Elasticsearch Serverless (9.4+)** — [free trial](https://www.elastic.co/cloud/cloud-trial-overview). A home for your data, and where Agent Builder lives.
+1. **Elasticsearch Serverless (9.4+)** — [free trial](https://cloud.elastic.co/serverless-registration?utm_source=github&utm_medium=event&utm_campaign=2026-10-07-elastic-mistral-nyc-hacknight-amer&utm_content=link). A home for your data, and where Agent Builder lives.
 2. **Mistral API key(s)** — We'll hand these out at the event. Use them directly with Mistral's APIs and tools, or plug them into Elastic inference endpoints (see the [Mistral guide](mistral_guide.md)).
 
 **How Elastic is used:** Elasticsearch can store and query an NYC dataset — full-text, aggregations, vector/semantic search — from a notebook, Dev Tools, your own app, or (optionally) Agent Builder.
