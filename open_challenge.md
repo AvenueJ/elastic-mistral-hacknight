@@ -19,7 +19,7 @@ Build anything you like on NYC data using tech from **Elasticsearch** and **Mist
 | **Pocket Naturalist** | [City Nature Challenge](https://www.inaturalist.org/projects/city-nature-challenge-2025-new-york-city) | Send an observation photo to **Mistral vision** (Pixtral), guess the species, and check it against the crowd ID — then map where it was found. |
 | **Invasive Species Tracker** | [City Nature Challenge](https://www.inaturalist.org/projects/city-nature-challenge-2025-new-york-city) | Aggregate + map the spread of spotted lanternfly or other invasives across boroughs, and summarize the hotspots with a Mistral chat model. |
 
-> **Need an LLM, embeddings, moderation, or speech?** Don't wire up a raw provider SDK - use **Mistral through Elasticsearch**. Create a Mistral inference endpoint once and `semantic_text`, Agent Builder, and your own queries can all use it. The [Mistral guide](mistral_guide.md) shows how, and covers the rest of Mistral's lineup (reasoning, moderation, Voxtral audio, Codestral).
+> **Need an LLM, embeddings, moderation, or speech?** Don't wire up a raw provider SDK - use **Mistral through Elasticsearch**. Create a Mistral inference endpoint once and `semantic_text`, Agent Builder, and your own queries can all use it. The [Mistral guide](using_mistral_in_elasticsearch.md) shows how, and covers the rest of Mistral's lineup (reasoning, moderation, Voxtral audio, Codestral).
 
 ## Stretch Ideas
 
@@ -111,7 +111,7 @@ for hit in resp['hits']['hits']:
     print(hit['_source'])
 ```
 
-That's it - you now have an index you can search, aggregate, or layer AI on top of. From here, add an explicit mapping, wire up a `semantic_text` field with a **Mistral embedding endpoint** for meaning-based search, or call a **Mistral** chat model for a RAG answer. The [Mistral guide](mistral_guide.md) has everything the RAG, semantic-search, moderation, and voice ideas above need.
+That's it - you now have an index you can search, aggregate, or layer AI on top of. From here, add an explicit mapping, wire up a `semantic_text` field with a **Mistral embedding endpoint** for meaning-based search, or call a **Mistral** chat model for a RAG answer. The [Mistral guide](using_mistral_in_elasticsearch.md) has everything the RAG, semantic-search, moderation, and voice ideas above need.
 
 ---
 
@@ -133,4 +133,4 @@ GET nyc_squirrels_semantic/_search
 { "query": { "semantic": { "field": "story", "query": "a squirrel acting suspicious near the reservoir" } } }
 ```
 
-See [mistral_guide.md](mistral_guide.md) for details, raw-vector kNN, and the full Mistral model lineup.
+See [using_mistral_in_elasticsearch.md](using_mistral_in_elasticsearch.md) for details, raw-vector kNN, and the full Mistral model lineup.

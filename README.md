@@ -53,7 +53,7 @@ Some presentation guidelines:
 Anything that combines **Elastic** and **Mistral** tech on NYC data. There's no required architecture — approach it however suits your idea. You might put Elasticsearch at the center, call Mistral APIs from your own code and index the results, build with Mistral's tools and Elastic's side by side, or something we haven't thought of. To get moving fast:
 
 1. **Pick a dataset** from the table below — each one has a ready-to-run ingest notebook that loads it into Elasticsearch.
-2. **Bring in Mistral tech** — Mistral's Vibe coding CLI and other creation tools, its APIs and products (OCR, audio, moderation, and more), or anything else Mistral offers. Mistral is a required part of your stack. The [Mistral guide](mistral_guide.md) is a starting point.
+2. **Bring in Mistral tech** — Mistral's Vibe coding CLI and other creation tools, its APIs and products (OCR, audio, moderation, and more), or anything else Mistral offers. Mistral is a required part of your stack. The [Mistral guide](using_mistral_in_elasticsearch.md) is a starting point.
 3. **Build your thing** — a search experience, a RAG app, an analytics pipeline, a classifier, an agent. See [open_challenge.md](open_challenge.md) for ideas and a generic ingest example.
 
 You can use a serverless Elastic deployment: [Elastic Cloud Serverless free trial](https://cloud.elastic.co/serverless-registration?utm_source=github&utm_medium=event&utm_campaign=2026-10-07-elastic-mistral-nyc-hacknight-amer&utm_content=link).
@@ -67,7 +67,7 @@ You can use a serverless Elastic deployment: [Elastic Cloud Serverless free tria
 You'll need two things:
 
 1. **Elasticsearch Serverless (9.4+)** — [free trial](https://cloud.elastic.co/serverless-registration?utm_source=github&utm_medium=event&utm_campaign=2026-10-07-elastic-mistral-nyc-hacknight-amer&utm_content=link). A home for your data, and where Agent Builder lives.
-2. **Mistral API key(s)** — We'll hand these out at the event. Use them directly with Mistral's APIs and tools, or plug them into Elastic inference endpoints (see the [Mistral guide](mistral_guide.md)).
+2. **Mistral API key(s)** — We'll hand these out at the event. Use them directly with Mistral's APIs and tools, or plug them into Elastic inference endpoints (see the [Mistral guide](using_mistral_in_elasticsearch.md)).
 
 **How Elastic is used:** Elasticsearch can store and query an NYC dataset — full-text, aggregations, vector/semantic search — from a notebook, Dev Tools, your own app, or (optionally) Agent Builder.
 
@@ -87,7 +87,7 @@ Keep it open — these are prompts, not requirements. Any of these can anchor a 
 | **Content moderation** | Flag or filter user input and dataset text |
 | **Speech, audio & OCR** | Voice-driven NYC assistants; transcribe audio or read scanned documents into Elasticsearch |
 
-See the [Mistral guide](mistral_guide.md) for how to get started, and [Mistral's docs](https://docs.mistral.ai/) for what's available.
+See the [Mistral guide](using_mistral_in_elasticsearch.md) for how to get started, and [Mistral's docs](https://docs.mistral.ai/) for what's available.
 
 ---
 
@@ -131,7 +131,7 @@ Handy documentation and references for tonight.
 - [Connecting to Elasticsearch](https://www.elastic.co/docs/reference/elasticsearch/clients) — endpoints, API keys, and client setup
 
 ### Mistral on Elastic
-- [Mistral guide (this repo)](mistral_guide.md) — getting started with Mistral in a hack setting
+- [Mistral guide (this repo)](using_mistral_in_elasticsearch.md) — getting started with Mistral in a hack setting
 - [Create a Mistral inference endpoint (API)](https://www.elastic.co/docs/api/doc/elasticsearch/operation/operation-inference-put-mistral)
 - [Mistral docs](https://docs.mistral.ai/)
 
