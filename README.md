@@ -14,16 +14,16 @@ The theme is **New York City**. The city publishes an enormous amount of open da
 
 ## Schedule
 
-**5:00 PM – Doors open**
+**5:00 PM – Doors open:**
 Grab food and drinks, meet other attendees, and get settled.
 
-**5:30 PM – Kickoff and demo**
+**5:30 PM – Kickoff and demo:**
 We'll introduce the challenge, walk through the tools, and share the starter resources.
 
-**5:45 PM – Build time**
+**5:45 PM – Build time:**
 Choose an idea and start building. Mentors from Mistral AI and Elastic will be available to help.
 
-**8:00 PM – Show and tell**
+**8:00 PM – Show and tell:**
 Share what you built with the room, no matter how finished it is. After the demos, we'll award prizes to the top projects.
 
 ---
@@ -59,9 +59,9 @@ Either way, your project needs both, and how you combine them is up to you. See 
 
 To get set up:
 - **Elastic:** use a serverless deployment from the [Elastic Cloud Serverless free trial](https://cloud.elastic.co/serverless-registration?utm_source=github&utm_medium=event&utm_campaign=2026-10-07-elastic-mistral-nyc-hacknight-amer&utm_content=link).
-- **Mistral: see the [Mistral guide](mistral_guide.md).
+- **Mistral:** see the [Mistral guide](mistral_guide.md).
 
-> **Agent frameworks are optional.** Elastic [Agent Builder](https://www.elastic.co/docs/explore-analyze/ai-features/elastic-agent-builder) is a slick, no-code way to stand up a conversational agent over your indices. Mistral's [Agents API](https://docs.mistral.ai/agents/introduction) gives you agents with built-in tools (web search, code interpreter, document library), function calling, and handoffs, and [Le Chat](https://docs.mistral.ai/le-chat/) lets you build agents with MCP connectors in the browser. Use either, both, or neither. A RAG script, a semantic-search demo, or an analytics notebook counts just as much.
+> **Agent frameworks are optional.** Elastic [Agent Builder](https://www.elastic.co/docs/explore-analyze/ai-features/elastic-agent-builder) is a slick, no-code way to stand up a conversational agent over your indices. Mistral's [Agents API](https://docs.mistral.ai/studio/agents/introduction) gives you agents with built-in tools (web search, code interpreter, document library), function calling, and handoffs, and [Vibe Work](https://docs.mistral.ai/vibe/work/get-started) lets you run agentic tasks with MCP connectors in the browser. Use either, both, or neither. A RAG script, a semantic-search demo, or an analytics notebook counts just as much.
 
 ---
 
@@ -93,7 +93,7 @@ Keep it open — these are prompts, not requirements. Any of these can anchor a 
 | **Vision** | Understand images, like City Nature Challenge observation photos |
 | **Speech & audio (Voxtral)** | Voice-driven NYC assistants; transcribe street recordings |
 | **Content moderation** | Flag or filter user input and dataset text |
-| **Le Chat** | Build and test agents in the browser, and plug in tools through MCP connectors |
+| **Vibe Work** | Run agentic tasks in the browser, and plug in tools through MCP connectors |
 
 See the [Mistral guide](using_mistral_in_elasticsearch.md) for how to get started, and [Mistral's docs](https://docs.mistral.ai/) for what's available.
 
@@ -146,7 +146,7 @@ Handy documentation and references for tonight.
 - [Function calling](https://docs.mistral.ai/capabilities/function_calling/) · [structured outputs](https://docs.mistral.ai/capabilities/structured_output/)
 - [Document AI / OCR](https://docs.mistral.ai/capabilities/document_ai/) · [vision](https://docs.mistral.ai/capabilities/vision/) · [Voxtral audio](https://docs.mistral.ai/capabilities/audio/) · [moderation](https://docs.mistral.ai/capabilities/guardrailing/)
 - [Mistral Vibe](https://docs.mistral.ai/mistral-vibe/introduction) — the coding CLI ([GitHub](https://github.com/mistralai/mistral-vibe))
-- [Le Chat](https://docs.mistral.ai/le-chat/) — agents and MCP connectors in the browser
+- [Vibe Work](https://docs.mistral.ai/vibe/work/get-started) — agentic tasks and MCP connectors in the browser
 - [Mistral cookbook](https://github.com/mistralai/cookbook) — runnable examples
 
 ### Mistral inside Elasticsearch

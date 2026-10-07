@@ -100,16 +100,16 @@ PUT _inference/chat_completion/mistral-chat
   "service": "mistral",
   "service_settings": {
     "api_key": "<MISTRAL_API_KEY>",
-    "model": "mistral-large-latest"
+    "model": "mistral-large-4"
   }
 }
 ```
 
 Swap `model` for whatever fits your project:
-- `mistral-large-latest` — most capable general-purpose model, also strong at reasoning and multi-step analysis
+- `mistral-large-4` — Mistral Large 4, the most capable general-purpose model, also strong at reasoning and multi-step analysis
 - `mistral-small-latest` — faster and cheaper, great for high-volume tools
 
-> Check [Mistral's model overview](https://docs.mistral.ai/getting-started/models/models_overview/) for the current model IDs.
+> Check [Mistral's model overview](https://docs.mistral.ai/models) for the current model IDs.
 
 ### Test it
 
@@ -131,7 +131,7 @@ If you choose to build an agent, Agent Builder uses the Elastic Managed LLM by d
 
 Prefer to set it globally? Search **GenAI Settings** in Kibana's global search bar and choose your Mistral connector/endpoint as the **Default AI Connector**. Either way, the only requirement is that the endpoint supports the **`chat_completion`** task type — which the one above does.
 
-> **UI alternative — connector route.** You can also add Mistral as a Kibana **Connector** (global search → **Connectors → Create connector**). Because Mistral's API is OpenAI-compatible, pick the **OpenAI** connector type, choose the *OpenAI-compatible / Other* provider, set the URL to `https://api.mistral.ai/v1/chat/completions`, the model to e.g. `mistral-large-latest`, and paste your key. The inference-endpoint route above is simpler and keeps everything in Dev Tools, so prefer it unless you need the connector UI.
+> **UI alternative — connector route.** You can also add Mistral as a Kibana **Connector** (global search → **Connectors → Create connector**). Because Mistral's API is OpenAI-compatible, pick the **OpenAI** connector type, choose the *OpenAI-compatible / Other* provider, set the URL to `https://api.mistral.ai/v1/chat/completions`, the model to e.g. `mistral-large-4`, and paste your key. The inference-endpoint route above is simpler and keeps everything in Dev Tools, so prefer it unless you need the connector UI.
 
 ---
 
@@ -190,4 +190,4 @@ print(resp["text_embedding"][0]["embedding"][:5])
 - [Using different models in Agent Builder](https://www.elastic.co/docs/solutions/search/agent-builder/models)
 - [Using OpenAI-compatible models](https://www.elastic.co/docs/solutions/search/using-openai-compatible-models)
 - [Semantic search with `semantic_text`](https://www.elastic.co/docs/solutions/search/semantic-search/semantic-search-semantic-text)
-- [Mistral API docs](https://docs.mistral.ai/) · [model overview](https://docs.mistral.ai/getting-started/models/models_overview/)
+- [Mistral API docs](https://docs.mistral.ai/) · [model overview](https://docs.mistral.ai/models)

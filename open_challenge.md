@@ -19,7 +19,7 @@ Build anything you like on NYC data using tech from **Elasticsearch** and **Mist
 | **Pocket Naturalist** | [City Nature Challenge](https://www.inaturalist.org/projects/city-nature-challenge-2025-new-york-city) | Send an observation photo to a vision-capable **Mistral** model, guess the species, and check it against the crowd ID — then map where it was found. |
 | **Invasive Species Tracker** | [City Nature Challenge](https://www.inaturalist.org/projects/city-nature-challenge-2025-new-york-city) | Aggregate + map the spread of spotted lanternfly or other invasives across boroughs, and summarize the hotspots with a Mistral chat model. |
 | **Borough Concierge** | any | A **Mistral agent** (Agents API) with an Elasticsearch search function as one of its tools, plus built-in web search for anything the index doesn't cover. |
-| **Chat With the City** | any | Connect **Le Chat** or **Mistral Vibe** to Elastic Agent Builder's MCP server, and query your NYC indices in plain language. |
+| **Chat With the City** | any | Connect **Vibe Work** or the **Vibe CLI** to Elastic Agent Builder's MCP server, and query your NYC indices in plain language. |
 | **Archive Digitizer** | [1940s Tax Photos](https://nycrecords.access.preservica.com/) | A **Mistral Document AI** pipeline extracts structured JSON (block, lot, signage, building type) from each photo, and Elasticsearch makes the whole archive searchable and aggregatable. |
 
 > **Two ways to use Mistral.** Call Mistral directly with the `mistralai` SDK or API: chat and reasoning, agents, function calling, OCR, vision, Voxtral audio, moderation, and more. Then index whatever it produces into Elasticsearch. Or register Mistral models as **Elasticsearch inference endpoints**, so `semantic_text`, Agent Builder, and your own queries can use them. Mix both freely. See the [Mistral guide](mistral_guide.md) for the direct route and [Using Mistral in Elasticsearch](using_mistral_in_elasticsearch.md) for the inference-endpoint route.
@@ -28,7 +28,7 @@ Build anything you like on NYC data using tech from **Elasticsearch** and **Mist
 
 - **Semantic search** over squirrel census stories or 311 complaints using Mistral embeddings - search by meaning, not keywords.
 - **Cross-dataset mashup** - join 311 rodent complaints with restaurant rodent violations by neighborhood and map the overlap.
-- **A reasoning agent** on `mistral-large-latest` that plans multi-step answers ("Which blocks have both the most noise complaints *and* the lowest restaurant grades?").
+- **A reasoning agent** on `mistral-large-4` that plans multi-step answers ("Which blocks have both the most noise complaints *and* the lowest restaurant grades?").
 - **Natural-language dashboard** - users ask questions in plain English; Elasticsearch retrieves, Mistral explains.
 - **An MCP-connected agent** you drive from Claude, Mistral Vibe, or your own app via Agent Builder's MCP server.
 - **OCR → structured data** - OCR a batch of 1940s tax photos with Mistral, extract the block/lot, and reconcile it against the metadata to measure OCR accuracy on real handwriting.
