@@ -1,7 +1,9 @@
 # 🤖 Using Mistral in Elasticsearch
 
 
-This hack night pairs **Elasticsearch** with **Mistral** models. If you want to use Mistral through Elasticsearch's **Inference API**: you create an *inference endpoint* backed by Mistral once, and then everything in Elastic — `semantic_text` fields, your own queries, and (optionally) Agent Builder — can use it. Auth is handled for you: the Mistral API key lives inside the endpoint, so your app only ever talks to Elasticsearch.
+> This guide covers one way to use Mistral: from inside Elasticsearch. To call Mistral directly — agents, OCR, Voxtral audio, vision, moderation, the Vibe coding CLI, and more — see the [Mistral guide](mistral_guide.md).
+
+This hack night pairs **Elasticsearch** with **Mistral** tech. If you want to use Mistral through Elasticsearch's **Inference API**: you create an *inference endpoint* backed by Mistral once, and then everything in Elastic — `semantic_text` fields, your own queries, and (optionally) Agent Builder — can use it. Auth is handled for you: the Mistral API key lives inside the endpoint, so your app only ever talks to Elasticsearch.
 You'll typically create **two** endpoints:
 
 1. a **`text_embedding`** endpoint (for semantic/vector search), and
@@ -104,9 +106,8 @@ PUT _inference/chat_completion/mistral-chat
 ```
 
 Swap `model` for whatever fits your project:
-- `mistral-large-latest` — most capable general-purpose model
+- `mistral-large-latest` — most capable general-purpose model, also strong at reasoning and multi-step analysis
 - `mistral-small-latest` — faster and cheaper, great for high-volume tools
-- `magistral-medium-latest` / `magistral-small-latest` — **reasoning** models for multi-step analysis
 
 > Check [Mistral's model overview](https://docs.mistral.ai/getting-started/models/models_overview/) for the current model IDs.
 
@@ -134,9 +135,9 @@ Prefer to set it globally? Search **GenAI Settings** in Kibana's global search b
 
 ---
 
-## 3. Calling Mistral from your own app
+## 3. Calling Mistral through Elasticsearch from your own app
 
-Building a backend, script, or custom chatbot? Talk to the **inference API** on your Elasticsearch endpoint — your Elasticsearch API key is the only credential you need; the Mistral key stays inside the endpoint.
+Building a backend, script, or custom chatbot? You can call Mistral directly with the `mistralai` SDK (see the [Mistral guide](mistral_guide.md)), or talk to the **inference API** on your Elasticsearch endpoint — your Elasticsearch API key is the only credential you need; the Mistral key stays inside the endpoint.
 
 ```bash
 curl "$ELASTICSEARCH_URL/_inference/chat_completion/mistral-chat/_stream" \
@@ -179,21 +180,6 @@ resp = es.inference.inference(
 )
 print(resp["text_embedding"][0]["embedding"][:5])
 ```
-
----
-
-## 4. The rest of Mistral's lineup
-
-| Capability | How to use it | Project idea |
-|---|---|---|
-| **Reasoning** (`magistral-*`) | A `chat_completion` endpoint with a `magistral-*` model | Plan multi-step answers: "Which borough has the fastest-declining restaurant grades, and why?" |
-| **Content moderation** (`mistral-moderation-latest`) | Call Mistral's [moderation API](https://docs.mistral.ai/capabilities/guardrailing/) directly; store scores in Elasticsearch | Moderate 311 free-text complaints before indexing; flag and filter toxic content |
-| **Speech-to-text** (Voxtral) | Transcribe audio with Mistral, index the transcript | Voice-note a restaurant review or a subway gripe → transcribe → search it semantically |
-| **Text-to-speech** | Generate spoken responses from your agent's answers | A hands-free "what's the vibe on this block?" NYC audio guide |
-| **Vibe-coding / CLI** (`codestral-latest`) | Use Mistral's coding model and CLI/IDE tooling while you build | Let Codestral write your ES|QL tools and ingest scripts tonight |
-| **Vision / OCR** (`mistral-ocr-latest`, Pixtral) | Extract text/structure from images or PDFs, index the result | OCR a menu or an inspection placard → index → ask questions about it |
-
-See [Mistral's model overview](https://docs.mistral.ai/getting-started/models/models_overview/) and [capabilities docs](https://docs.mistral.ai/capabilities/) for current model IDs and request formats.
 
 ---
 

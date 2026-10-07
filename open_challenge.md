@@ -2,7 +2,7 @@
 
 Build anything you like on NYC data using tech from **Elasticsearch** and **Mistral**. This page has project ideas across the suggested datasets and a ready-to-run ingest example you can point at *any* NYC Open Data set.
 
-> No polished UI required — a notebook, Dev Tools, a script, or Kibana is a perfectly good demo. We care about how you combine Elastic and Mistral, not how it looks. Agent Builder is an optional bonus, not a requirement.
+> No polished UI required — a notebook, Dev Tools, a script, or Kibana is a perfectly good demo. We care about how you combine Elastic and Mistral, not how it looks. Agent frameworks (Elastic Agent Builder, Mistral's Agents API) are optional, not requirements.
 
 ## Example Projects
 
@@ -16,18 +16,21 @@ Build anything you like on NYC data using tech from **Elasticsearch** and **Mist
 | **Voice of the City** | any + [Voxtral](https://docs.mistral.ai/) | Transcribe a spoken question with Mistral speech-to-text, answer it from Elasticsearch. |
 | **Time Machine Block Explorer** | [1940s Tax Photos](https://nycrecords.access.preservica.com/) | OCR the block/lot signboards with **Mistral OCR**, index them, and ask "show me what this block looked like in 1940." |
 | **City Soundscape** | [SONYC Urban Sound](https://zenodo.org/records/2590742) | Aggregate which sensors hear the most jackhammers/sirens; transcribe human-voice clips with **Voxtral**. |
-| **Pocket Naturalist** | [City Nature Challenge](https://www.inaturalist.org/projects/city-nature-challenge-2025-new-york-city) | Send an observation photo to **Mistral vision** (Pixtral), guess the species, and check it against the crowd ID — then map where it was found. |
+| **Pocket Naturalist** | [City Nature Challenge](https://www.inaturalist.org/projects/city-nature-challenge-2025-new-york-city) | Send an observation photo to a vision-capable **Mistral** model, guess the species, and check it against the crowd ID — then map where it was found. |
 | **Invasive Species Tracker** | [City Nature Challenge](https://www.inaturalist.org/projects/city-nature-challenge-2025-new-york-city) | Aggregate + map the spread of spotted lanternfly or other invasives across boroughs, and summarize the hotspots with a Mistral chat model. |
+| **Borough Concierge** | any | A **Mistral agent** (Agents API) with an Elasticsearch search function as one of its tools, plus built-in web search for anything the index doesn't cover. |
+| **Chat With the City** | any | Connect **Le Chat** or **Mistral Vibe** to Elastic Agent Builder's MCP server, and query your NYC indices in plain language. |
+| **Archive Digitizer** | [1940s Tax Photos](https://nycrecords.access.preservica.com/) | A **Mistral Document AI** pipeline extracts structured JSON (block, lot, signage, building type) from each photo, and Elasticsearch makes the whole archive searchable and aggregatable. |
 
-> **Need an LLM, embeddings, moderation, or speech?** Don't wire up a raw provider SDK - use **Mistral through Elasticsearch**. Create a Mistral inference endpoint once and `semantic_text`, Agent Builder, and your own queries can all use it. The [Mistral guide](mistral_guide.md) shows how, and covers the rest of Mistral's lineup (reasoning, moderation, Voxtral audio, Codestral).
+> **Two ways to use Mistral.** Call Mistral directly with the `mistralai` SDK or API: chat and reasoning, agents, function calling, OCR, vision, Voxtral audio, moderation, and more. Then index whatever it produces into Elasticsearch. Or register Mistral models as **Elasticsearch inference endpoints**, so `semantic_text`, Agent Builder, and your own queries can use them. Mix both freely. See the [Mistral guide](mistral_guide.md) for the direct route and [Using Mistral in Elasticsearch](using_mistral_in_elasticsearch.md) for the inference-endpoint route.
 
 ## Stretch Ideas
 
 - **Semantic search** over squirrel census stories or 311 complaints using Mistral embeddings - search by meaning, not keywords.
 - **Cross-dataset mashup** - join 311 rodent complaints with restaurant rodent violations by neighborhood and map the overlap.
-- **A reasoning agent** on `magistral-medium-latest` that plans multi-step answers ("Which blocks have both the most noise complaints *and* the lowest restaurant grades?").
+- **A reasoning agent** on `mistral-large-latest` that plans multi-step answers ("Which blocks have both the most noise complaints *and* the lowest restaurant grades?").
 - **Natural-language dashboard** - users ask questions in plain English; Elasticsearch retrieves, Mistral explains.
-- **An MCP-connected agent** you drive from Claude or your own app via Agent Builder's MCP server.
+- **An MCP-connected agent** you drive from Claude, Mistral Vibe, or your own app via Agent Builder's MCP server.
 - **OCR → structured data** - OCR a batch of 1940s tax photos with Mistral, extract the block/lot, and reconcile it against the metadata to measure OCR accuracy on real handwriting.
 - **Then vs. now** - OCR a block's 1940s photos and join to today's restaurant grades or 311 complaints for the same block, telling an 80-year story of a NYC street.
 
@@ -111,7 +114,7 @@ for hit in resp['hits']['hits']:
     print(hit['_source'])
 ```
 
-That's it - you now have an index you can search, aggregate, or layer AI on top of. From here, add an explicit mapping, wire up a `semantic_text` field with a **Mistral embedding endpoint** for meaning-based search, or call a **Mistral** chat model for a RAG answer. The [Mistral guide](mistral_guide.md) has everything the RAG, semantic-search, moderation, and voice ideas above need.
+That's it - you now have an index you can search, aggregate, or layer AI on top of. From here, add an explicit mapping, wire up a `semantic_text` field with a **Mistral embedding endpoint** for meaning-based search ([Using Mistral in Elasticsearch](using_mistral_in_elasticsearch.md)), or call **Mistral** directly with the `mistralai` SDK: a chat model for a RAG answer, an agent that queries this index as a tool, moderation, OCR, or Voxtral audio ([Mistral guide](mistral_guide.md)).
 
 ---
 
@@ -133,4 +136,4 @@ GET nyc_squirrels_semantic/_search
 { "query": { "semantic": { "field": "story", "query": "a squirrel acting suspicious near the reservoir" } } }
 ```
 
-See [mistral_guide.md](mistral_guide.md) for details, raw-vector kNN, and the full Mistral model lineup.
+See [Using Mistral in Elasticsearch](using_mistral_in_elasticsearch.md) for details and raw-vector kNN.
