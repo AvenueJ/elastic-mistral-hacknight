@@ -58,7 +58,7 @@ Anything that combines **Elastic** and **Mistral** tech on NYC data. There's no 
 Either way, your project needs both, and how you combine them is up to you. See [open_challenge.md](open_challenge.md) for ideas, the [Mistral guide](mistral_guide.md) for building with Mistral, and [Using Mistral in Elasticsearch](using_mistral_in_elasticsearch.md) for wiring Mistral models into Elastic.
 
 To get set up:
-- **Elastic:** use a serverless deployment from the [Elastic Cloud Serverless free trial](https://www.elastic.co/cloud/cloud-trial-overview).
+- **Elastic:** use a serverless deployment from the [Elastic Cloud Serverless free trial](https://cloud.elastic.co/serverless-registration?utm_source=github&utm_medium=event&utm_campaign=2026-10-07-elastic-mistral-nyc-hacknight-amer&utm_content=link).
 - **Mistral: see the [Mistral guide](mistral_guide.md).
 
 > **Agent frameworks are optional.** Elastic [Agent Builder](https://www.elastic.co/docs/explore-analyze/ai-features/elastic-agent-builder) is a slick, no-code way to stand up a conversational agent over your indices. Mistral's [Agents API](https://docs.mistral.ai/agents/introduction) gives you agents with built-in tools (web search, code interpreter, document library), function calling, and handoffs, and [Le Chat](https://docs.mistral.ai/le-chat/) lets you build agents with MCP connectors in the browser. Use either, both, or neither. A RAG script, a semantic-search demo, or an analytics notebook counts just as much.
@@ -69,7 +69,7 @@ To get set up:
 
 You'll need two things:
 
-1. **Elasticsearch Serverless (9.4+)** — [free trial](https://www.elastic.co/cloud/cloud-trial-overview). A home for your data, and where Agent Builder lives.
+1. **Elasticsearch Serverless (9.4+)** — [free trial](https://cloud.elastic.co/serverless-registration?utm_source=github&utm_medium=event&utm_campaign=2026-10-07-elastic-mistral-nyc-hacknight-amer&utm_content=link). A home for your data, and where Agent Builder lives.
 2. **Mistral API key(s)** — We'll hand these out at the event. Install the SDK with `pip install mistralai` (or `npm i @mistralai/mistralai`) and call Mistral's models, agents, OCR, and audio APIs directly. The same key works in Mistral Vibe.
 
 **How Elastic is used:** Elasticsearch can store and query an NYC dataset — full-text, aggregations, vector/semantic search — from a notebook, Dev Tools, your own app, or (optionally) Agent Builder.
@@ -95,7 +95,7 @@ Keep it open — these are prompts, not requirements. Any of these can anchor a 
 | **Content moderation** | Flag or filter user input and dataset text |
 | **Le Chat** | Build and test agents in the browser, and plug in tools through MCP connectors |
 
-See the [Mistral guide](mistral_guide.md) for how to get started, and [Mistral's docs](https://docs.mistral.ai/) for what's available.
+See the [Mistral guide](using_mistral_in_elasticsearch.md) for how to get started, and [Mistral's docs](https://docs.mistral.ai/) for what's available.
 
 ---
 

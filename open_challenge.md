@@ -136,4 +136,4 @@ GET nyc_squirrels_semantic/_search
 { "query": { "semantic": { "field": "story", "query": "a squirrel acting suspicious near the reservoir" } } }
 ```
 
-See [Using Mistral in Elasticsearch](using_mistral_in_elasticsearch.md) for details and raw-vector kNN.
+See [using_mistral_in_elasticsearch.md](using_mistral_in_elasticsearch.md) for details, raw-vector kNN, and the full Mistral model lineup.
