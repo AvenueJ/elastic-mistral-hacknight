@@ -1,4 +1,4 @@
-# 🧡 Building with Mistral
+# 🧡 Building with Mistral 😼
 
 ![Le chonk: Introducing Mistral Large 4](img/le_chonk.jpg)
 
