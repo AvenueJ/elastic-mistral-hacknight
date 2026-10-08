@@ -1,5 +1,5 @@
 * Bharadhwaj Ram
-* Elmir Abdullaiev
+* StreetScript
 * lets-getitnow
 * Luna Chen
 * Mohan E
@@ -11,14 +11,11 @@
 * Shreeraj P
 * xiaojia yu
 * Sairam Veereddy
-* Pranav Palle
 * Nik Mak
 * mahmoud ezat
 * Sahil Pardasani
 * Sagar Hegde
-* Sahil Dhumale
 * Aditya Malkar
-* Divyesh Thirukonda
 * Masaya Sasaki
 * Antii Torronen
 * Tarun Theegela
